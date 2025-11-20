@@ -12,6 +12,7 @@ import { QueryPage } from './pages/Query/QueryPage';
 import { AdminPage } from './pages/Admin/AdminPage';
 import { FilesPage } from './pages/Media/FilesPage';
 import { EntityDataPage } from './pages/Data/EntityDataPage';
+import { StructuredDataImportPage } from './pages/Data/StructuredDataImportPage';
 
 // Create a client
 const queryClient = new QueryClient({
@@ -38,6 +39,7 @@ function App() {
               <Route element={<Layout />}>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/query" element={<QueryPage />} />
+                <Route path="/data/import" element={<StructuredDataImportPage />} />
                 <Route path="/files/:category" element={<FilesPage />} />
                 <Route path="/data/:dbType/:entityName" element={<EntityDataPage />} />
                 

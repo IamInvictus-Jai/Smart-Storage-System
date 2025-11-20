@@ -1,4 +1,4 @@
-import { Home, Search, Crown, LogOut, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Home, Search, Crown, LogOut, ChevronLeft, ChevronRight, Database } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 import { useAuthStore } from '../../stores/authStore';
 import { useUIStore } from '../../stores/uiStore';
@@ -25,6 +25,7 @@ export const Sidebar = () => {
   const navItems = [
     { to: '/', icon: Home, label: 'Home' },
     { to: '/query', icon: Search, label: 'Query' },
+    { to: '/data/import', icon: Database, label: 'Data Import' },
   ];
   
   if (isAdmin) {
